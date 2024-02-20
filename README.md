@@ -24,7 +24,7 @@
     php bin/console doctrine:migrations:migrate
     ```
 
-   d. (Optional) Load database fixtures:
+   d.  Load database fixtures:
 
     ```bash
     php bin/console doctrine:fixtures:load
