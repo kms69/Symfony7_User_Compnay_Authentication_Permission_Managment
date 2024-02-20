@@ -1,0 +1,24 @@
+
+# Ignore vendor directory
+/vendor/
+
+# Ignore .env files
+/.env
+/.env.test
+/.env.local
+/.env.local.php
+
+# Ignore cache and logs directories
+/var/cache/
+/var/log/
+
+# Ignore IDE-related files and directories
+/.idea/
+/.vscode/
+
+# Ignore composer lock file
+/composer.lock
+
+# Ignore PHPUnit cache and temporary files
+/.phpunit.result.cache
+/.phpunit.cache

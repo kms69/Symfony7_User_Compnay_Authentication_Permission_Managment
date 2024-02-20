@@ -1,0 +1,25 @@
+# config/packages/security.yaml
+security:
+  providers:
+    users:
+      entity:
+        class: App\Entity\User
+
+  password_hashers:
+    Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
+  firewalls:
+    dev:
+      pattern: ^/(_(profiler|wdt)|css|images|js)/
+      security: false
+
+    main:
+      lazy: true
+      stateless: true
+      provider: users
+      custom_authenticators:
+        - App\Security\CustomAuthenticator
+
+  access_control:
+    - { path: 'api/users', roles: IS_AUTHENTICATED_FULLY }
+    - { path: 'api/companies', roles: IS_AUTHENTICATED_FULLY }
